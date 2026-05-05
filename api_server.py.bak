@@ -137,11 +137,3 @@ def start_api_thread(port: int = 8080):
     thread = threading.Thread(target=run_api, args=(port,), daemon=True)
     thread.start()
     return thread
-
-
-if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("VENDETTA_API_PORT", "3004"))
-    host = os.environ.get("VENDETTA_API_HOST", "0.0.0.0")
-    print(f"[vendetta-api] arrancando en {host}:{port}", flush=True)
-    app.run(host=host, port=port, debug=False, use_reloader=False)

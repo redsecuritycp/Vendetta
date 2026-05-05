@@ -1,0 +1,649 @@
+{
+  "metadata": {
+    "scope_url": "https://diaz.gob.ar/",
+    "scan_date": "2025-12-30T18:18:54.667936",
+    "tool_version": "1.0.0",
+    "total_responses": 1,
+    "total_findings": 10,
+    "findings_summary": {
+      "critical": 0,
+      "high": 1,
+      "medium": 2,
+      "low": 4,
+      "info": 3
+    }
+  },
+  "identity": {
+    "url": "https://diaz.gob.ar/",
+    "normalized_url": "https://diaz.gob.ar/",
+    "host": "diaz.gob.ar",
+    "scheme": "https",
+    "port": 443,
+    "ip": "104.21.38.20"
+  },
+  "robots_txt": {
+    "found": true,
+    "content": "User-agent: *\nDisallow:\nCrawl-delay: 60 # 60 segundos entre cada request\nVisit-time: 0300-1200 # 00:00 AM a 09:00 AM (America/Argentina/Buenos_Aires)\nRequest-rate: 6/60m # permite indexar 6 documentos cada 60 minutos\nRequest-rate: 3/60m 1200-0300 # permite indexar 3 documentos cada 60 minutos entre las 09:00 AM a 00:00 AM (America/Argentina/Buenos_Aires)\n\nDisallow: /cgi-bin/\nDisallow: /admin/\nDisallow: /*.sql$\n\n# Bloqueo de las URL dinamicas\nDisallow: /*?\n\n# Bloqueo de busquedas\nDisallow: /?s=\nDisallow: /search\n\n# Bloqueo de trackbacks\nDisallow: /trackback\nDisallow: /*trackback\nDisallow: /*trackback*\nDisallow: /*/trackback\n\n# Permitir Google Webmaster Tool\nUser-agent: Googlebot\nAllow: /*.js$\nAllow: /*.css$\n\n# wordpress\nDisallow: /xmlrpc.php\nDisallow: /wp-admin/\nDisallow: /wp-includes/\nDisallow: /wp-content/plugins/\nDisallow: /wp-content/cache/\nDisallow: /wp-content/themes/\n\nDisallow: /*/xmlrpc.php\nDisallow: /*/wp-admin/\nDisallow: /*/wp-includes/\nDisallow: /*/wp-content/plugins/\nDisallow: /*/wp-content/cache/\nDisallow: /*/wp-content/themes/\n\n# joomla\nDisallow: /administrator/\nDisallow: /bin/\nDisallow: /cache/\nDisallow: /cli/\nDisallow: /components/\nDisallow: /images/\nDisallow: /includes/\nDisallow: /installation/\nDisallow: /language/\nDisallow: /layouts/\nDisallow: /libraries/\nDisallow: /logs/\nDisallow: /media/\nDisallow: /modules/\nDisallow: /plugins/\nDisallow: /templates/\nDisallow: /tmp/\n\nDisallow: /*/administrator/\nDisallow: /*/bin/\nDisallow: /*/cache/\nDisallow: /*/cli/\nDisallow: /*/components/\nDisallow: /*/images/\nDisallow: /*/includes/\nDisallow: /*/installation/\nDisallow: /*/language/\nDisallow: /*/layouts/\nDisallow: /*/libraries/\nDisallow: /*/logs/\nDisallow: /*/media/\nDisallow: /*/modules/\nDisallow: /*/plugins/\nDisallow: /*/templates/\nDisallow: /*/tmp/\n\n"
+  },
+  "responses": [
+    {
+      "url": "https://diaz.gob.ar/",
+      "original_url": "https://diaz.gob.ar/",
+      "status_code": 200,
+      "headers": {
+        "Date": "Tue, 30 Dec 2025 18:18:52 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Connection": "keep-alive",
+        "x-powered-by": "PHP/8.2.29",
+        "link": "<https://diaz.gob.ar/wp-json/>; rel=\"https://api.w.org/\", <https://diaz.gob.ar/wp-json/wp/v2/pages/6>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://diaz.gob.ar/>; rel=shortlink",
+        "x-tec-api-version": "v1",
+        "x-tec-api-root": "https://diaz.gob.ar/wp-json/tribe/events/v1/",
+        "x-tec-api-origin": "https://diaz.gob.ar",
+        "Server": "cloudflare",
+        "cf-cache-status": "DYNAMIC",
+        "Server-Timing": "cfCacheStatus;desc=\"DYNAMIC\", cfEdge;dur=7,cfOrigin;dur=1655",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ErW3DyUyxkMvHFcp1XxZNsBzeQz6z0N3ULHSMT%2FECrH8TYSIux6uNRcTrNn2M%2F%2Fc56mafLbCIXjnExge9KGoR8mpfXPgi26aOw%2BB\"}]}",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "9b638ac2fa146129-ORD",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "content": "<!doctype html>\n<html lang=\"es\" class=\"no-js\" itemtype=\"https://schema.org/WebPage\" itemscope>\n<head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1\">\n\t<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />\n\n\t<!-- This site is optimized with the Yoast SEO plugin v25.8 - https://yoast.com/wordpress/plugins/seo/ -->\n\t<title>Bienvenidos | Comuna de Díaz</title>\n\t<meta name=\"description\" content=\"Portal web de nuestra comuna, un espacio diseñado para estar más cerca de vos y brindarte toda la información que necesitás de manera ágil y sencilla. Este sitio es un paso importante para fortalecer la comunicación con nuestra comunidad. Queremos que sea una herramienta útil para todos los vecinos y vecinas.\" />\n\t<link rel=\"canonical\" href=\"https://diaz.gob.ar/\" />\n\t<meta property=\"og:locale\" content=\"es_ES\" />\n\t<meta property=\"og:type\" content=\"website\" />\n\t<meta property=\"og:title\" content=\"Bienvenidos | Comuna de Díaz\" />\n\t<meta property=\"og:description\" content=\"Portal web de nuestra comuna, un espacio diseñado para estar más cerca de vos y brindarte toda la información que necesitás de manera ágil y sencilla. Este sitio es un paso importante para fortalecer la comunicación con nuestra comunidad. Queremos que sea una herramienta útil para todos los vecinos y vecinas.\" />\n\t<meta property=\"og:url\" content=\"https://diaz.gob.ar/\" />\n\t<meta property=\"og:site_name\" content=\"Comuna de Díaz\" />\n\t<meta property=\"article:modified_time\" content=\"2024-12-22T01:21:37+00:00\" />\n\t<meta property=\"og:image\" content=\"https://diaz.gob.ar/wp-content/uploads/2024/12/logo_portada_02.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1600\" />\n\t<meta property=\"og:image:height\" content=\"776\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n\t<meta name=\"twitter:card\" content=\"summary_large_image\" />\n\t<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\"\n... [truncado]",
+      "content_type": "text/html; charset=UTF-8",
+      "size": 2063,
+      "redirect_count": 0,
+      "final_url": "https://diaz.gob.ar/"
+    }
+  ],
+  "findings": [
+    {
+      "type": "cert_info",
+      "severity": "Info",
+      "title": "Información del certificado TLS",
+      "description": "Información del certificado obtenida",
+      "recommendation": "N/A",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "tls_version": "TLSv1.3",
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Google Trust Services",
+          "commonName": "WE1"
+        },
+        "subject": {
+          "commonName": "diaz.gob.ar"
+        },
+        "san": [
+          "diaz.gob.ar",
+          "*.diaz.gob.ar"
+        ],
+        "valid_from": "2025-11-03T17:41:37",
+        "valid_until": "2026-02-01T18:39:20",
+        "days_until_expiry": 33
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "High",
+      "title": "Falta header de seguridad: HSTS",
+      "description": "Strict-Transport-Security (HSTS) no está presente en https://diaz.gob.ar/",
+      "recommendation": "Agregar header Strict-Transport-Security con max-age>=31536000 e includeSubDomains",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "Strict-Transport-Security",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "Medium",
+      "title": "Falta header de seguridad: CSP",
+      "description": "Content-Security-Policy (CSP) no está presente en https://diaz.gob.ar/",
+      "recommendation": "Implementar CSP para prevenir XSS y otros ataques de inyección",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "Content-Security-Policy",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "Medium",
+      "title": "Falta header de seguridad: X-Frame-Options",
+      "description": "X-Frame-Options no está presente en https://diaz.gob.ar/",
+      "recommendation": "Agregar X-Frame-Options: DENY o SAMEORIGIN para prevenir clickjacking",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "X-Frame-Options",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "Low",
+      "title": "Falta header de seguridad: X-Content-Type-Options",
+      "description": "X-Content-Type-Options no está presente en https://diaz.gob.ar/",
+      "recommendation": "Agregar X-Content-Type-Options: nosniff para prevenir MIME sniffing",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "X-Content-Type-Options",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "Low",
+      "title": "Falta header de seguridad: Referrer-Policy",
+      "description": "Referrer-Policy no está presente en https://diaz.gob.ar/",
+      "recommendation": "Agregar Referrer-Policy para controlar información de referrer enviada",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "Referrer-Policy",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "Low",
+      "title": "Falta header de seguridad: Permissions-Policy",
+      "description": "Permissions-Policy no está presente en https://diaz.gob.ar/",
+      "recommendation": "Agregar Permissions-Policy para controlar características del navegador",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "Permissions-Policy",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "Low",
+      "title": "Falta header de seguridad: COOP",
+      "description": "Cross-Origin-Opener-Policy no está presente en https://diaz.gob.ar/",
+      "recommendation": "Considerar agregar COOP para aislar el contexto de navegación",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "Cross-Origin-Opener-Policy",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "Info",
+      "title": "Falta header de seguridad: COEP",
+      "description": "Cross-Origin-Embedder-Policy no está presente en https://diaz.gob.ar/",
+      "recommendation": "Considerar COEP si se requiere aislamiento estricto de recursos",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "Cross-Origin-Embedder-Policy",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    },
+    {
+      "type": "missing_security_header",
+      "severity": "Info",
+      "title": "Falta header de seguridad: CORP",
+      "description": "Cross-Origin-Resource-Policy no está presente en https://diaz.gob.ar/",
+      "recommendation": "Considerar CORP para controlar cómo otros sitios pueden cargar recursos",
+      "evidence": {
+        "url": "https://diaz.gob.ar/",
+        "missing_header": "Cross-Origin-Resource-Policy",
+        "all_headers": [
+          "Date",
+          "Content-Type",
+          "Connection",
+          "x-powered-by",
+          "link",
+          "x-tec-api-version",
+          "x-tec-api-root",
+          "x-tec-api-origin",
+          "Server",
+          "cf-cache-status",
+          "Server-Timing",
+          "Report-To",
+          "Nel",
+          "Content-Encoding",
+          "CF-RAY",
+          "alt-svc"
+        ]
+      }
+    }
+  ],
+  "findings_by_severity": {
+    "Critical": [],
+    "High": [
+      {
+        "type": "missing_security_header",
+        "severity": "High",
+        "title": "Falta header de seguridad: HSTS",
+        "description": "Strict-Transport-Security (HSTS) no está presente en https://diaz.gob.ar/",
+        "recommendation": "Agregar header Strict-Transport-Security con max-age>=31536000 e includeSubDomains",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "Strict-Transport-Security",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      }
+    ],
+    "Medium": [
+      {
+        "type": "missing_security_header",
+        "severity": "Medium",
+        "title": "Falta header de seguridad: CSP",
+        "description": "Content-Security-Policy (CSP) no está presente en https://diaz.gob.ar/",
+        "recommendation": "Implementar CSP para prevenir XSS y otros ataques de inyección",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "Content-Security-Policy",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      },
+      {
+        "type": "missing_security_header",
+        "severity": "Medium",
+        "title": "Falta header de seguridad: X-Frame-Options",
+        "description": "X-Frame-Options no está presente en https://diaz.gob.ar/",
+        "recommendation": "Agregar X-Frame-Options: DENY o SAMEORIGIN para prevenir clickjacking",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "X-Frame-Options",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      }
+    ],
+    "Low": [
+      {
+        "type": "missing_security_header",
+        "severity": "Low",
+        "title": "Falta header de seguridad: X-Content-Type-Options",
+        "description": "X-Content-Type-Options no está presente en https://diaz.gob.ar/",
+        "recommendation": "Agregar X-Content-Type-Options: nosniff para prevenir MIME sniffing",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "X-Content-Type-Options",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      },
+      {
+        "type": "missing_security_header",
+        "severity": "Low",
+        "title": "Falta header de seguridad: Referrer-Policy",
+        "description": "Referrer-Policy no está presente en https://diaz.gob.ar/",
+        "recommendation": "Agregar Referrer-Policy para controlar información de referrer enviada",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "Referrer-Policy",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      },
+      {
+        "type": "missing_security_header",
+        "severity": "Low",
+        "title": "Falta header de seguridad: Permissions-Policy",
+        "description": "Permissions-Policy no está presente en https://diaz.gob.ar/",
+        "recommendation": "Agregar Permissions-Policy para controlar características del navegador",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "Permissions-Policy",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      },
+      {
+        "type": "missing_security_header",
+        "severity": "Low",
+        "title": "Falta header de seguridad: COOP",
+        "description": "Cross-Origin-Opener-Policy no está presente en https://diaz.gob.ar/",
+        "recommendation": "Considerar agregar COOP para aislar el contexto de navegación",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "Cross-Origin-Opener-Policy",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      }
+    ],
+    "Info": [
+      {
+        "type": "cert_info",
+        "severity": "Info",
+        "title": "Información del certificado TLS",
+        "description": "Información del certificado obtenida",
+        "recommendation": "N/A",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "tls_version": "TLSv1.3",
+          "issuer": {
+            "countryName": "US",
+            "organizationName": "Google Trust Services",
+            "commonName": "WE1"
+          },
+          "subject": {
+            "commonName": "diaz.gob.ar"
+          },
+          "san": [
+            "diaz.gob.ar",
+            "*.diaz.gob.ar"
+          ],
+          "valid_from": "2025-11-03T17:41:37",
+          "valid_until": "2026-02-01T18:39:20",
+          "days_until_expiry": 33
+        }
+      },
+      {
+        "type": "missing_security_header",
+        "severity": "Info",
+        "title": "Falta header de seguridad: COEP",
+        "description": "Cross-Origin-Embedder-Policy no está presente en https://diaz.gob.ar/",
+        "recommendation": "Considerar COEP si se requiere aislamiento estricto de recursos",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "Cross-Origin-Embedder-Policy",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      },
+      {
+        "type": "missing_security_header",
+        "severity": "Info",
+        "title": "Falta header de seguridad: CORP",
+        "description": "Cross-Origin-Resource-Policy no está presente en https://diaz.gob.ar/",
+        "recommendation": "Considerar CORP para controlar cómo otros sitios pueden cargar recursos",
+        "evidence": {
+          "url": "https://diaz.gob.ar/",
+          "missing_header": "Cross-Origin-Resource-Policy",
+          "all_headers": [
+            "Date",
+            "Content-Type",
+            "Connection",
+            "x-powered-by",
+            "link",
+            "x-tec-api-version",
+            "x-tec-api-root",
+            "x-tec-api-origin",
+            "Server",
+            "cf-cache-status",
+            "Server-Timing",
+            "Report-To",
+            "Nel",
+            "Content-Encoding",
+            "CF-RAY",
+            "alt-svc"
+          ]
+        }
+      }
+    ]
+  },
+  "findings_by_type": {
+    "cert_info": 1,
+    "missing_security_header": 9
+  }
+}

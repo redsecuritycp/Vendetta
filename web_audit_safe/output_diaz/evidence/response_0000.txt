@@ -1,0 +1,49 @@
+URL: https://diaz.gob.ar/
+Status Code: 200
+Content-Type: text/html; charset=UTF-8
+Size: 2063 bytes
+
+--- Headers ---
+CF-RAY: 9b638ac2fa146129-ORD
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Type: text/html; charset=UTF-8
+Date: Tue, 30 Dec 2025 18:18:52 GMT
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ErW3DyUyxkMvHFcp1XxZNsBzeQz6z0N3ULHSMT%2FECrH8TYSIux6uNRcTrNn2M%2F%2Fc56mafLbCIXjnExge9KGoR8mpfXPgi26aOw%2BB"}]}
+Server: cloudflare
+Server-Timing: cfCacheStatus;desc="DYNAMIC", cfEdge;dur=7,cfOrigin;dur=1655
+alt-svc: h3=":443"; ma=86400
+cf-cache-status: DYNAMIC
+link: <https://diaz.gob.ar/wp-json/>; rel="https://api.w.org/", <https://diaz.gob.ar/wp-json/wp/v2/pages/6>; rel="alternate"; title="JSON"; type="application/json", <https://diaz.gob.ar/>; rel=shortlink
+x-powered-by: PHP/8.2.29
+x-tec-api-origin: https://diaz.gob.ar
+x-tec-api-root: https://diaz.gob.ar/wp-json/tribe/events/v1/
+x-tec-api-version: v1
+
+--- Content (snippet) ---
+<!doctype html>
+<html lang="es" class="no-js" itemtype="https://schema.org/WebPage" itemscope>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v25.8 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Bienvenidos | Comuna de Díaz</title>
+	<meta name="description" content="Portal web de nuestra comuna, un espacio diseñado para estar más cerca de vos y brindarte toda la información que necesitás de manera ágil y sencilla. Este sitio es un paso importante para fortalecer la comunicación con nuestra comunidad. Queremos que sea una herramienta útil para todos los vecinos y vecinas." />
+	<link rel="canonical" href="https://diaz.gob.ar/" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Bienvenidos | Comuna de Díaz" />
+	<meta property="og:description" content="Portal web de nuestra comuna, un espacio diseñado para estar más cerca de vos y brindarte toda la información que necesitás de manera ágil y sencilla. Este sitio es un paso importante para fortalecer la comunicación con nuestra comunidad. Queremos que sea una herramienta útil para todos los vecinos y vecinas." />
+	<meta property="og:url" content="https://diaz.gob.ar/" />
+	<meta property="og:site_name" content="Comuna de Díaz" />
+	<meta property="article:modified_time" content="2024-12-22T01:21:37+00:00" />
+	<meta property="og:image" content="https://diaz.gob.ar/wp-content/uploads/2024/12/logo_portada_02.jpg" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="776" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage"
+... [truncado]

@@ -1,0 +1,13 @@
+{
+  "session_id": "d9c82c7e-f364-4479-a8e1-06a744a64d7d",
+  "cwd": "/home/ubuntu/projects/vendetta",
+  "start_time": "2026-04-07T13:16:59.822Z",
+  "end_time": "2026-04-07T13:17:02.350Z",
+  "message_count": 1,
+  "user_messages_preview": [
+    "echo trusted\n\n"
+  ],
+  "tools_used": [],
+  "logged_at": "2026-04-07T13:30:01.245475",
+  "source_file": "/home/ubuntu/.claude/projects/-home-ubuntu-projects-vendetta/d9c82c7e-f364-4479-a8e1-06a744a64d7d.jsonl"
+}

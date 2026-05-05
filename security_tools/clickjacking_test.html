@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Clickjacking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 3px solid #dc3545;
+            border-radius: 5px;
+        }
+        .overlay-button {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .overlay-button:hover {
+            background: #218838;
+        }
+        .iframe-wrapper {
+            position: relative;
+        }
+        .result {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .vulnerable {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            color: #721c24;
+        }
+        .protected {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+        }
+        .info {
+            background: #d1ecf1;
+            border: 2px solid #17a2b8;
+            color: #0c5460;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">
+        <h2>⚠️ ADVERTENCIA LEGAL</h2>
+        <p><strong>Este test es SOLO para uso educativo y en sistemas propios o autorizados.</strong></p>
+        <p>No uses esto para atacar sitios sin permiso. El uso no autorizado es ilegal.</p>
+    </div>
+
+    <h1>🔍 Test de Clickjacking</h1>
+    <p>Este test verifica si un sitio puede ser embebido en un iframe, lo cual indica vulnerabilidad a clickjacking si no tiene <code>X-Frame-Options</code> o <code>frame-ancestors</code> en CSP.</p>
+
+    <div class="test-container">
+        <h2>Configuración</h2>
+        <label for="targetUrl">URL a probar:</label>
+        <input type="text" id="targetUrl" value="https://diaz.gob.ar/" style="width: 70%; padding: 8px; margin: 10px 0;">
+        <button onclick="testClickjacking()" style="padding: 8px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Probar</button>
+    </div>
+
+    <div class="test-container">
+        <h2>Test 1: Iframe Simple</h2>
+        <p>Intenta cargar el sitio en un iframe normal.</p>
+        <div class="iframe-wrapper">
+            <iframe id="testIframe" src="about:blank"></iframe>
+        </div>
+        <div id="result1" class="result info" style="display: none;">
+            <strong>Resultado:</strong> <span id="result1Text">Cargando...</span>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>Test 2: Iframe con Overlay (Simulación de Ataque)</h2>
+        <p>Simula un ataque real: un botón falso sobre el iframe.</p>
+        <div class="iframe-wrapper" style="position: relative;">
+            <button class="overlay-button" onclick="alert('¡Este es un botón falso! Un atacante podría hacer click en elementos reales debajo.')">
+                🎁 Ganá un Premio - Click Acá
+            </button>
+            <iframe id="attackIframe" src="about:blank" style="opacity: 0.3;"></iframe>
+        </div>
+        <div id="result2" class="result info" style="display: none;">
+            <strong>Resultado:</strong> <span id="result2Text">Cargando...</span>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>Interpretación de Resultados</h2>
+        <ul>
+            <li><strong>Si el sitio se carga en el iframe:</strong> ❌ VULNERABLE - No tiene protección contra clickjacking</li>
+            <li><strong>Si el iframe está vacío o muestra error:</strong> ✅ PROTEGIDO - Tiene X-Frame-Options o frame-ancestors</li>
+            <li><strong>Si muestra mensaje de "X-Frame-Options deny":</strong> ✅ PROTEGIDO - Configuración correcta</li>
+        </ul>
+    </div>
+
+    <script>
+        function testClickjacking() {
+            const url = document.getElementById('targetUrl').value;
+            if (!url) {
+                alert('Por favor ingresa una URL');
+                return;
+            }
+
+            // Test 1: Iframe simple
+            const iframe1 = document.getElementById('testIframe');
+            const result1 = document.getElementById('result1');
+            const result1Text = document.getElementById('result1Text');
+            
+            result1.style.display = 'block';
+            result1Text.textContent = 'Cargando...';
+            result1.className = 'result info';
+
+            iframe1.onload = function() {
+                try {
+                    // Intentar acceder al contenido (será bloqueado si hay X-Frame-Options)
+                    const iframeDoc = iframe1.contentDocument || iframe1.contentWindow.document;
+                    result1Text.textContent = '✅ VULNERABLE - El sitio se cargó en el iframe';
+                    result1.className = 'result vulnerable';
+                } catch (e) {
+                    result1Text.textContent = '✅ PROTEGIDO - X-Frame-Options está bloqueando el iframe';
+                    result1.className = 'result protected';
+                }
+            };
+
+            iframe1.onerror = function() {
+                result1Text.textContent = '✅ PROTEGIDO - Error al cargar (probablemente bloqueado)';
+                result1.className = 'result protected';
+            };
+
+            iframe1.src = url;
+
+            // Test 2: Iframe de ataque
+            const iframe2 = document.getElementById('attackIframe');
+            const result2 = document.getElementById('result2');
+            const result2Text = document.getElementById('result2Text');
+            
+            result2.style.display = 'block';
+            result2Text.textContent = 'Cargando...';
+            result2.className = 'result info';
+
+            iframe2.onload = function() {
+                try {
+                    const iframeDoc = iframe2.contentDocument || iframe2.contentWindow.document;
+                    result2Text.textContent = '❌ VULNERABLE - Un atacante podría hacer clickjacking';
+                    result2.className = 'result vulnerable';
+                } catch (e) {
+                    result2Text.textContent = '✅ PROTEGIDO - Bloqueado por X-Frame-Options';
+                    result2.className = 'result protected';
+                }
+            };
+
+            iframe2.onerror = function() {
+                result2Text.textContent = '✅ PROTEGIDO - Bloqueado';
+                result2.className = 'result protected';
+            };
+
+            iframe2.src = url;
+        }
+
+        // Cargar automáticamente al inicio
+        window.onload = function() {
+            testClickjacking();
+        };
+    </script>
+</body>
+</html>
