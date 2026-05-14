@@ -11,10 +11,14 @@ import json
 from full_scan import FullScanner
 from report_generator import ReportGenerator
 from db_manager import DBManager
-from template_engine import TemplateEngine
+
+from modules.templates.routes import bp as templates_bp
 
 app = Flask(__name__)
 db = DBManager()
+
+# Blueprints modulares (Fase 12+)
+app.register_blueprint(templates_bp)
 
 
 @app.route("/", methods=["GET"])
@@ -58,36 +62,6 @@ def start_scan():
         "summary": report.summary,
         "findings_count": len(report.findings),
         "duration": report.duration,
-    }), 200
-
-
-@app.route("/api/templates", methods=["POST"])
-def run_templates():
-    """Ejecuta templates contra un objetivo"""
-    data = request.get_json() or {}
-    url = data.get("url", "")
-    if not url:
-        return jsonify({"error": "Falta parametro 'url'"}), 400
-
-    custom = data.get("custom_templates", [])
-    ids = data.get("template_ids", None)
-
-    engine = TemplateEngine()
-    matches = engine.scan(url, custom_templates=custom, template_ids=ids)
-
-    return jsonify({
-        "target": url,
-        "matches": [
-            {
-                "id": m.template_id,
-                "name": m.template_name,
-                "severity": m.severity,
-                "url": m.matched_at,
-                "description": m.description,
-            }
-            for m in matches
-        ],
-        "total": len(matches),
     }), 200
 
 
